@@ -1,0 +1,24 @@
+@media (max-width:740px) {
+    #header{
+        overflow: hidden;
+    }
+    #nav> li{
+        display: block;
+    }
+    #nav {
+        display: block;
+    }
+    #nav li a{
+        width: 100%;
+    }
+    #nav > li:first-child{
+        display: inline-block;
+    }
+    #header .mobile-menu-btn{
+        display: block;
+    }
+   #header .search-btn{
+       display: none;
+   }
+
+}
