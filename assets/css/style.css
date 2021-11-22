@@ -194,6 +194,7 @@ line-height: 46px;
 #slider .text-description{
 font-size: 15px;
 margin-bottom: 32px;
+text-shadow: 0 0 1px #000;
 
 }
 #content{
