@@ -22,6 +22,9 @@ html{
 .mt-16{
     margin-top: 16px;
 }
+.mt-32{
+    margin-top: 32px;
+}
 .text-center{
     text-align: center !important;
 }
@@ -63,6 +66,9 @@ html{
     padding: 8px 16px;
     display: inline-block;
     border:none;
+    text-align: center;
+    appearance: none;
+    --webkit-appearance: none;
 }
 .btn:hover{
     cursor: pointer;
@@ -196,9 +202,9 @@ margin-bottom: 32px;
 }
 #content .content-section{
    width: 800px;
-   padding:  64px 0 112px;
+   max-width: 100%;
+   padding:  64px 0 112px 0;
    margin-left: auto;
-   width: 100%;
    margin-right: auto;
    padding-right: 16px;
    padding-left: 16px;
@@ -222,7 +228,7 @@ margin-bottom: 32px;
     line-height: 1.4;
 }
 #content .member-list{
-    margin-top: 48px ;
+    margin-top: 32px ;
 }
 
 #content .name{
@@ -265,7 +271,7 @@ margin: 15px 0;
 }
 /* Places */
 .places-list{
-    margin-top: 32px;
+    margin-top: 16px;
     
 }
 
@@ -374,10 +380,7 @@ margin: 15px 0;
 }
 
 
-.contact-info{
-    font-size: 18px;
-    line-height: 1.5;
-}
+
 /* Contact */
 .contact-icon{
     width: 30px;
@@ -403,6 +406,19 @@ margin: 15px 0;
     padding: 10px 16px;
     float: right;
 }
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info a{
+    color: #101aef;
+    opacity: 0.8;
+}
+.contact-info a:hover{
+    opacity: 1;
+}
+
+
 /* Map section */
 .map-section img{
     width: 100%;

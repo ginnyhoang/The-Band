@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/Icon/themify-icons-font/themify-icons/themify-icons.css">
-    <title>Võ Hoàng Phúc</title>
+    <title>The Band</title>
     
 </head>
 <body>
@@ -60,15 +60,15 @@
               <p class="about-blog">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
               </p>
               <div class="row member-list">
-                  <div class="col col-third text-center">
+                  <div class="col col-third text-center mt-32 s-col-full ">
                       <p class="name">Name</p>
                       <img src="./assets/img/member.jpg" alt="" class="img-member">
                   </div>
-                  <div class="col col-third text-center">
+                  <div class="col col-third text-center mt-32 s-col-full">
                       <p class="name">Name</p>
                       <img src="./assets/img/member.jpg" alt="" class="img-member">
                   </div>
-                  <div class="col col-third text-center">
+                  <div class="col col-third text-center mt-32 s-col-full">
                       <p class="name">Name</p>
                       <img src="./assets/img/member.jpg" alt="" class="img-member">
                   </div>
@@ -88,31 +88,31 @@
               </ul>
               <!-- Places -->
           <div class="row places-list">
-                <div class=" col col-third">
+                <div class=" col col-third mt-16 s-col-full">
                   <img src="./assets/img/place1.jpg" alt="New York" class="place-img">
                   <div class="place-body">
                     <h3 class="place-heading">New York</h3>
                     <p class="place-time">Fri 27 Nov 2016</p>
                     <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button class="btn js-buy-ticket">Buy Tickets</button>
+                    <button class="btn s-full-width js-buy-ticket  ">Buy Tickets</button>
                   </div>
                 </div>
-                <div class="col col-third">
+                <div class="col col-third mt-16 s-col-full">
                   <img src="./assets/img/place2.jpg" alt="Paris" class="place-img">
                   <div class="place-body">
                     <h3 class="place-heading">Paris</h3>
                     <p class="place-time">Sat 28 Nov 2016</p>
                     <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button class="btn js-buy-ticket">Buy Tickets</button>
+                    <button class="btn s-full-width js-buy-ticket ">Buy Tickets</button>
                   </div>
                 </div>
-                <div class="col col-third">
+                <div class="col col-third mt-16 s-col-full">
                   <img src="./assets/img/place3.jpg" alt="San Francisco" class="place-img">
                   <div class="place-body">
                     <h3 class="place-heading">San Francisco</h3>
                     <p class="place-time">Sun 29 Nov 2016</p>
                     <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button class="btn js-buy-ticket">Buy Tickets</button>
+                    <button class="btn s-full-width js-buy-ticket ">Buy Tickets</button>
                   </div>
                 </div>
               </div>
@@ -123,19 +123,18 @@
             <h2 class="section-heading">CONTACT</h2>
             <p class="section-sub-heading">Fan? Drop a note!</p>
             <div class="row contact-section">
-              <div class="col col-half contact-info">
+              <div class="col col-half s-col-full contact-info">
                 <i class="contact-icon ti-location-pin"></i>Chicago, US <br>
-                <i class="contact-icon ti-mobile"></i>Phone: +00 151515  <br>
-                <i class="contact-icon ti-email"></i>Email: mail@mail.com <br>
+                <i class="contact-icon ti-mobile"></i>Phone: <a href="tel: +00 151515"> +00 151515</a>  <br>
+                <i class="contact-icon ti-email"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a> <br>
               </div>
-            <div class="col col-half contact-form">
+            <div class="col col-half s-col-full contact-form">
                  <form action="">
-                  
                    <div class="row">
-                      <div class="col col-half">
+                      <div class="col col-half s-col-full">
                         <input type="text"placeholder="Name" required class="form-control">
                       </div>
-                      <div class="col col-half">
+                      <div class="col col-half s-col-full s-mt-8">
                         <input type="email"placeholder="Email" required class="form-control">
                       </div>
                    </div>
@@ -145,7 +144,7 @@
                       </div>
                    </div>
                    
-                   <input class="btn pull-right mt-16" type="submit" value="SEND">
+                   <input class="contact-submit-btn btn pull-right mt-16 s-full-width" type="submit" value="SEND">
                  </form>
             </div>
             </div>
@@ -240,8 +239,14 @@
     var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
     for(var i=0; i < menuItems.length; i++){
       var menuItem = menuItems[i];
-      menuItem.onclick = function() {
-        header.style.height=null;
+      menuItem.onclick = function(event) {
+        var isParentMenu = this.nextElementSibling  && this.nextElementSibling.classList.contains('subnav');
+        if(isParentMenu){
+          event.preventDefault();
+        }else{
+
+          header.style.height=null;
+        }
       }
     }
   </script>
